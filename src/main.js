@@ -6,7 +6,7 @@ import "./module/page-onload.js"
 import "./module/agendamento/load.js"
 import "./module/form/hours.js"
 import "./dados/hora-funcionamento.js"
-
+import "./module/agendamento/clickhours.js"
 
 // css
 import "./styles/form.css";
