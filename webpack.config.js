@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin'); // nome correto e importação sem espaços
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   target: 'web',
@@ -19,7 +19,14 @@ module.exports = {
     },
     port: 3333,
     open: true,
-    liveReload: true
+    liveReload: true,
+    
+    proxy: {
+      '/agendados': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      },
+    },
   },
 
   plugins: [
@@ -31,8 +38,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/assets'), // de onde copia
-          to: path.resolve(__dirname, 'dist/src/assets') // para onde copia (mantendo o "src")
+          from: path.resolve(__dirname, 'src/assets'),
+          to: path.resolve(__dirname, 'dist/src/assets')
         }
       ]
     })
@@ -41,23 +48,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/, // Regex para arquivos .css
+        test: /\.css$/,
         use: [
-          'style-loader', // Adiciona o CSS ao DOM
-          'css-loader'    // Interpreta os arquivos CSS
+          'style-loader',
+          'css-loader'
         ]
       },
       {
-        test: /\.js$/, // Regex para arquivos .js
-        exclude: /node_modules/, // Exclui a pasta node_modules
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
-          loader: "babel-loader", // Usando o Babel para transpilar JavaScript
+          loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"] // Transpilar com o preset-env
+            presets: ["@babel/preset-env"]
           }
         }
       }
     ]
   }
 };
-

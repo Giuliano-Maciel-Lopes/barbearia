@@ -24,21 +24,6 @@ export async function marked() {
       
     };
   console.log(markeduser)
-    /*try {
-      const response = await fetch("http://localhost:3333/marcados", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(markeduser),
-      });
-  
-      if (!response.ok) throw new Error("Erro na requisição");
-  
-      const result = await response.json();
-      console.log("Agendamento enviado com sucesso:", result);
-    } catch (error) {
-      console.error("Erro ao enviar agendamento:", error);
-    }*/
+    return markeduser
   }
   

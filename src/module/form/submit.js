@@ -1,5 +1,6 @@
 import dayjs from "dayjs"
 import { marked } from "../agendamento/marked"
+import { newscheduling } from "../../services/new-scheduling"
 
 const form = document.querySelector(".form")
 const inputdate = document.querySelector("#date")
@@ -12,10 +13,13 @@ inputdate.min = configDate // data min as outras para atras fica "invesives"
 
 
 
-form.addEventListener("submit", (event)=> {
+form.addEventListener("submit",async (event)=> {
     event.preventDefault()
 
-    marked()
+ const markeduser = await marked()
 
-    console.log("enviado")
+   const teste = await newscheduling( {name: markeduser.name,
+    id: markeduser.id,
+    date: markeduser.date}) // vai para o json 
+    
 })

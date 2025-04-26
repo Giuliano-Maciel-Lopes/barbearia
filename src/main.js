@@ -10,6 +10,8 @@ import "./module/agendamento/clickhours.js"
 import"./dados/marcados.js"
 import "./module/agendamento/marked.js"
 import "./module/form/date-change.js"
+import "./services/api-config.js"
+import "./services/new-scheduling.js"
 
 // css
 import "./styles/form.css";
