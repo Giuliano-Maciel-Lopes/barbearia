@@ -1,10 +1,12 @@
 import dayjs from "dayjs";
 import { operationHours   } from "../../dados/hora-funcionamento.js";
 import { clickhours } from "../agendamento/clickhours.js";
-
+const ul = document.querySelector(".hours")
 export function horariosdisp({date}){
-  const ul = document.querySelector(".hours")
-
+  
+  
+  
+ul.innerHTML = ""
     const disponivel = operationHours.map( (horas)=>{ // mapiei cada  item da array
   const [horasSeparadas]= horas.split(":") // criei uma const onde vai ter cada hora
  
@@ -45,7 +47,6 @@ function housAdd(text){
  limtn.textContent= text
 
  ul.append(limtn)
-
  
 
 
@@ -53,6 +54,7 @@ function housAdd(text){
 }
 
 clickhours()
+
 
     
 }

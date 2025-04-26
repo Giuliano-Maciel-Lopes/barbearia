@@ -1,4 +1,5 @@
 import dayjs from "dayjs"
+import { marked } from "../agendamento/marked"
 
 const form = document.querySelector(".form")
 const inputdate = document.querySelector("#date")
@@ -14,7 +15,7 @@ inputdate.min = configDate // data min as outras para atras fica "invesives"
 form.addEventListener("submit", (event)=> {
     event.preventDefault()
 
-
+    marked()
 
     console.log("enviado")
 })
