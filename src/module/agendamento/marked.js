@@ -23,6 +23,7 @@ export async function marked() {
       id: id
       
     };
+    console.log(two)
   console.log(markeduser)
     return markeduser
   }

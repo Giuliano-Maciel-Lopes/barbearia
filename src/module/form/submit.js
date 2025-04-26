@@ -15,7 +15,7 @@ inputdate.min = configDate // data min as outras para atras fica "invesives"
 
 form.addEventListener("submit",async (event)=> {
     event.preventDefault()
-
+console.log(hours)
  const markeduser = await marked()
 
    const teste = await newscheduling( {name: markeduser.name,

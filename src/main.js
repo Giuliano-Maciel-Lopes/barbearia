@@ -12,6 +12,7 @@ import "./module/agendamento/marked.js"
 import "./module/form/date-change.js"
 import "./services/api-config.js"
 import "./services/new-scheduling.js"
+import "./services/agend-do-dia.js"
 
 // css
 import "./styles/form.css";
