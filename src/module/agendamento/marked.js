@@ -14,7 +14,7 @@ export async function marked() {
     
     const two = dayjs(date).add(hours , "hour")
     
-    const id = new Date().getTime()
+    const id = new Date().getTime().toString() // RESOLVEU O BUG DO DELETE
       
 
   

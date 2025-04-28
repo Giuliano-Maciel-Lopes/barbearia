@@ -19,9 +19,9 @@ periods.forEach(listaitem => {
                 
                 if (isConfirmed) {
                     console.log("Item excluído");
-                    item.remove()
-                     await cancelarapi({id})
                     
+                     await cancelarapi({id})
+                     item.remove()
                  
                 } else {
                     console.log("Item não excluído");
