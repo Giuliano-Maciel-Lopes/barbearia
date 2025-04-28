@@ -2,20 +2,29 @@ import dayjs from "dayjs";
 import { operationHours   } from "../../dados/hora-funcionamento.js";
 import { clickhours } from "../agendamento/clickhours.js";
 const ul = document.querySelector(".hours")
-export function horariosdisp({date}){
+export function horariosdisp({date , schedulingApiDay = []}){
   
   
   
 ul.innerHTML = "" //limpa 
+
+ const hour = schedulingApiDay.map((marcados)=>{
+  return dayjs(marcados.date).hour()
+  
+  })
 
     const disponivel = operationHours.map( (horas)=>{ // mapiei cada  item da array
   const [horasSeparadas]= horas.split(":") // criei uma const onde vai ter cada hora
  
 
 
-   const yesno = dayjs(date).hour(horasSeparadas , "hour").isBefore(dayjs()) // c o horario ja passou ou nao deixandoimposiibilitado 
+   const yesno = dayjs(date).hour(horasSeparadas , "hour").isBefore(dayjs()) // o primeiro pega a data do input o hour => pega ads horas doa array  isbefore compara com a data atual do navegador
+    // c o horario ja passou ou nao deixandoimposiibilitado com a linha abaixo 
+    const Jamarcados = hour.includes(Number(horasSeparadas))
+     const avaliable = Jamarcados || yesno
+
    return {horasSeparadas 
-   , avaliable: yesno 
+   , avaliable
 }// pega vdd ou false
 
   })
@@ -39,8 +48,9 @@ ul.innerHTML = "" //limpa
  li.textContent = horasSeparadas
  ul.append(li)
 
- 
+
 })
+
 
 function housAdd(text){
  const limtn = document.createElement("li")

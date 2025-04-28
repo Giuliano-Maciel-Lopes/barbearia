@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import { AgendamentoDay } from "./load";
 
 export async function marked() {
     const name = document.querySelector("#client").value;
@@ -27,4 +28,6 @@ export async function marked() {
   console.log(markeduser)
     return markeduser
   }
+AgendamentoDay()
+
   

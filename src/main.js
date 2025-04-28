@@ -13,6 +13,8 @@ import "./services/api-config.js"
 import "./services/new-scheduling.js"
 import "./services/agend-do-dia.js"
 import "./module/agendamento/agend-sample.js"
+import "./module/agendamento/cancel.js"
+import "./services/cancelando agendado.js"
 
 // css
 import "./styles/form.css";

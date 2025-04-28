@@ -11,11 +11,11 @@ export async function AgendamentoDay(){
    // lendo a api 
    let schedulingApiDay = await  searchScheduling({date})
    
-   sampleScheduling({schedulingApiDay})
+   sampleScheduling({schedulingApiDay ,  date})
 
 
    // renderiza horario disponivel 
-    horariosdisp(date)
+    horariosdisp({date ,  schedulingApiDay})
     
 
 }
