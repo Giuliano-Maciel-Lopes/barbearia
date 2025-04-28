@@ -8,7 +8,7 @@ export async function searchScheduling({date}) {
         const serachDate = await response.json()
 
        const dayScheduling=  serachDate.filter((agendamentos)=>{
-          return  dayjs(date).isSame(agendamentos.when , "date")
+          return  dayjs(date).isSame(agendamentos.date , "date")
 
             
         })

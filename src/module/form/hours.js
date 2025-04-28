@@ -6,7 +6,8 @@ export function horariosdisp({date}){
   
   
   
-ul.innerHTML = ""
+ul.innerHTML = "" //limpa 
+
     const disponivel = operationHours.map( (horas)=>{ // mapiei cada  item da array
   const [horasSeparadas]= horas.split(":") // criei uma const onde vai ter cada hora
  

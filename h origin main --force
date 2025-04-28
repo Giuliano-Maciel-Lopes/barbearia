@@ -1,0 +1,41 @@
+[33mcommit f43069b7fcdf18b30e366100cd8480089526007a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;32mbranch-recuperada[m[33m)[m
+Author: Giuliano Maciel <giulianomaciellopes@gmail.com>
+Date:   Sat Apr 26 17:15:00 2025 -0300
+
+    metodo get para mostrar os horarios do dia criado
+
+[33mcommit 2acaa735a544ac32c271df0ded1642ff75165b1a[m
+Author: Giuliano Maciel <giulianomaciellopes@gmail.com>
+Date:   Sat Apr 26 15:36:56 2025 -0300
+
+    metodo post inserido para de agendamentos
+
+[33mcommit 5cba9dfcfe4ab3bcc7caa60f7efd671f5e67a7c0[m
+Author: Giuliano Maciel <giulianomaciellopes@gmail.com>
+Date:   Sat Apr 26 12:10:27 2025 -0300
+
+    js concluido agora so liga a api
+
+[33mcommit 9045eff119a6b9c964d9c19b0b4059eda5bbf2fb[m
+Author: Giuliano Maciel <giulianomaciellopes@gmail.com>
+Date:   Fri Apr 25 14:31:06 2025 -0300
+
+    horario e datas criadas e impossibilitando marcar horarios antigos
+
+[33mcommit 6f52901c356c9147ce6181eb868327f39392e257[m
+Author: Giuliano Maciel <giulianomaciellopes@gmail.com>
+Date:   Thu Apr 24 16:31:45 2025 -0300
+
+    organizado dados do horairo e data
+
+[33mcommit 08e09acc3fdaf5759dd69f65c68acb8f29fbeb47[m
+Author: Giuliano Maciel <giulianomaciellopes@gmail.com>
+Date:   Thu Apr 24 12:39:11 2025 -0300
+
+    pacotes baicados e day js
+
+[33mcommit b9cf81af6d66018588d226a5efb13143632b20e6[m
+Author: Giuliano Maciel <giulianomaciellopes@gmail.com>
+Date:   Thu Apr 24 08:55:38 2025 -0300
+
+    initial commit
